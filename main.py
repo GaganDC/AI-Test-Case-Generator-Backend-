@@ -64,6 +64,11 @@ GITHUB_CLIENT_SECRET = os.getenv("GITHUB_CLIENT_SECRET")
 def root():
     return {"message": "🚀 API is running successfully"}
 
+@app.get("/health")
+def root():
+    return {"status":"ok"}
+
+
 
 @app.get("/github/login")
 def github_login():
